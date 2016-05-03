@@ -1,3 +1,5 @@
+@import "mixins/common";
+@import "common_classes";
 
 @font-face {
   font-family: 'robotobold';
@@ -12,9 +14,6 @@
 
 }
 
-
-
-
 @font-face {
   font-family: 'robotoregular';
   src: url('./../files/fonts/RobotoRegular/roboto-regular-webfont.eot');
@@ -28,7 +27,15 @@
 
 }
 
+ul li{list-style: none;}
+*{margin: 0; padding: 0;}
+a{text-decoration: none; color: #000;}
+
 body{
-  background: red;
-  font-family: "robotobold";
+  background: #f9f9f9;
+  font-family: "robotoregular";
+}
+.max-width-wrap{
+  max-width: 1140px;
+  margin: 0 auto;
 }

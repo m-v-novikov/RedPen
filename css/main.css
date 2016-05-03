@@ -1,3 +1,18 @@
+.v-al-mid {
+  height: 100%;
+}
+.v-al-mid:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+}
+
 @font-face {
   font-family: 'robotobold';
   src: url("./../files/fonts/RobotoBold/roboto-bold-webfont.eot");
@@ -12,9 +27,185 @@
   font-weight: normal;
   font-style: normal;
 }
+ul li {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 body {
-  background: red;
+  background: #f9f9f9;
+  font-family: "robotoregular";
+}
+
+.max-width-wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  height: 80px;
+}
+header .main-menu {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80%;
+}
+header .main-menu li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6%;
+  font-size: 16px;
+  line-height: 1.4;
+}
+header .main-menu li .logotype {
   font-family: "robotobold";
+  font-size: 24px;
+  color: #000;
+}
+header .right-bar {
+  vertical-align: middle;
+  text-align: right;
+  display: inline-block;
+  width: 20%;
+}
+header .right-bar [class^="licon-"] {
+  display: inline-block;
+  /* block, inline-block, inline-flex, table */
+  vertical-align: middle;
+  position: relative;
+  font-style: normal;
+}
+header .right-bar [class^="licon-"]:before, header .right-bar [class^="licon-"]:after {
+  content: '';
+  pointer-events: none;
+}
+header .right-bar .licon-sun {
+  margin: 0 4%;
+  width: 6.5px;
+  height: 6.5px;
+  border: 6.5px solid #ddd;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+}
+header .right-bar .licon-sun:before {
+  position: absolute;
+  width: 6.5px;
+  height: 6.5px;
+  right: -9.62963px;
+  top: 0;
+  background-color: #ddd;
+  display: block;
+  -webkit-border-radius: 3.25px;
+  -moz-border-radius: 3.25px;
+  -o-border-radius: 3.25px;
+  border-radius: 3.25px;
+  box-shadow: -19.5px 0 #ddd;
+}
+header .right-bar .licon-sun:after {
+  position: absolute;
+  width: 6.5px;
+  height: 6.5px;
+  right: 0;
+  top: 10px;
+  background-color: #ddd;
+  display: block;
+  -webkit-border-radius: 1.3px;
+  -moz-border-radius: 1.3px;
+  -o-border-radius: 1.3px;
+  border-radius: 1.3px;
+  box-shadow: 0 -19.5px 0 #ddd;
+}
+header .right-bar .licon-paper {
+  width: 20px;
+  height: 26px;
+  border: 1.625px solid #ddd;
+  -webkit-border-radius: 3.25px;
+  -moz-border-radius: 3.25px;
+  -o-border-radius: 3.25px;
+  border-radius: 3.25px;
+}
+header .right-bar .licon-paper:before {
+  width: 8.66667px;
+  height: 1.625px;
+  background-color: #ddd;
+  -webkit-border-radius: 3.25px;
+  -moz-border-radius: 3.25px;
+  -o-border-radius: 3.25px;
+  border-radius: 3.25px;
+  position: absolute;
+  top: 5.2px;
+  left: 1.3px;
+  box-shadow: 0 6.5px 0 #ddd, 0 13px 0 #ddd;
+}
+header .right-bar .licon-paper:after {
+  width: 13px;
+  height: 1.625px;
+  background-color: #ddd;
+  -webkit-border-radius: 3.25px;
+  -moz-border-radius: 3.25px;
+  -o-border-radius: 3.25px;
+  border-radius: 3.25px;
+  position: absolute;
+  top: 1.85714px;
+  left: 1.3px;
+  box-shadow: 0 6.5px 0 #ddd, 0 13px 0 #ddd;
+}
+
+.graphics {
+  padding: 40px 0;
+}
+.graphics .graphic-item {
+  background: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  float: left;
+  margin-right: 2%;
+}
+.graphics .graphic-item.small {
+  width: 20%;
+}
+.graphics .graphic-item_title {
+  font-size: 16px;
+  height: 44px;
+}
+.graphics .graphic-item_quantity {
+  font-size: 24px;
+}
+.graphics .graphic-item_quantity p {
+  font-size: 12px;
+}
+.graphics .graphic-item_description {
+  font-size: 12px;
+}
+.graphics .graphic-item_diagram-graph {
+  border: 1px solid red;
+}
+.graphics .graphic-item .graphic-item_item_description.top span {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+.graphics .graphic-item .graphic-item_item_description.bottom span {
+  color: #999999;
+  display: inline-block;
+  width: 33%;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

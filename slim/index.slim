@@ -1,6 +1,5 @@
 doctype html
-html lang='en'
-  -#ng-app='RedPen'
+html lang='en' ng-app='RedPen'
   head
     meta charset='utf-8'
     title
@@ -9,8 +8,52 @@ html lang='en'
     script src='./../node_modules/angular/angular.js'
     script src='./../node_modules/angular-route/angular-route.js'
     script src='./../node_modules/angular-resource/angular-resource.js'
+    script src='./../js/static_plugins/fusioncharts.js'
+    script src='./../js/static_plugins/fusioncharts.charts.js'
+    script src='./../js/static_plugins/angular-fusioncharts.min.js'
+    script src='./../js/app.js'
     script src='./../js/Controller.js'
-  body.clearfix
-    |fghsadghjfdagsf <br/>
-    |срвпыоапрвылпавыпро
-  -#ng-controller='PhoneListCtrl'
+
+  body.clearfix ng-controller='GreatingCtrl'
+    header
+      div.max-width-wrap.v-al-mid
+        ul.main-menu
+          li
+            span.logotype СЛАНЦНЕФТЬ
+          li
+            a.menu-links href="#" О площадке
+          li
+            a.menu-links href="#" Зал Сланца
+          li
+            a.menu-links href="#" Новости
+        div.right-bar
+          a.authentication href="#" Мой профиль
+          span.licon-sun
+          span.licon-sun
+
+    main
+      -#ul.graphics
+      -#  li ng-repeat="(key, value) in bricks"
+      -#    div.graphic-item-wrap
+      -#      |{{key}} :  {{value}}
+      div.max-width-wrap
+        ul.graphics.clearfix
+          li.graphic-item.small ng-repeat="graph in diagrams"
+            div.graphic-item_wrap
+              div.graphic-item_title
+                |{{graph.title}}
+              div.graphic-item_quantity
+                |{{graph.commonQuantity}}
+                p
+                  |{{graph.measure}} за все время
+              div.graphic-item_diagram
+                div[fusioncharts width="100%" height="100%" type="msline" chart="{{attrs}}" categories="{{graph.categories}}" dataset="{{graph.dataset}}"]
+                div.graphic-item_description
+                  p.graphic-item_item_description.top
+                    span +3000
+                    span +3500
+                    span +5000
+                  p.graphic-item_item_description.bottom
+                    span 1 квартал
+                    span 2 квартал
+                    span 3 квартал
