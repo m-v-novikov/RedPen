@@ -175,14 +175,17 @@ header .right-bar .licon-paper:after {
   padding: 20px 0;
   text-align: center;
   float: left;
-  margin-right: 2%;
+  margin: 20px 2%;
 }
-.graphics .graphic-item.small {
-  width: 20%;
+.graphics .graphic-item.smaller {
+  width: 21%;
+}
+.graphics .graphic-item.bigger {
+  width: 46%;
 }
 .graphics .graphic-item_title {
   font-size: 16px;
-  height: 44px;
+  height: 50px;
 }
 .graphics .graphic-item_quantity {
   font-size: 24px;
