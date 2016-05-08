@@ -32,101 +32,12 @@ header{
     text-align: right;
     display: inline-block;
     width: 20%;
-
-    [class^="licon-"] {
-      display: inline-block; /* block, inline-block, inline-flex, table */
-      vertical-align: middle;
-      position: relative;
-      font-style:normal;
-      &:before, &:after{
-        content:'';pointer-events: none;
+    .links {
+      margin-left: 15px;
+      color: #757575;
+      &.glyphicon-cog {
+        top: -7px;
       }
     }
-    .licon-sun{
-      margin: 0 4%;
-      width: $size/4;
-      height:$size/4;
-      border:$size/4 solid $basecolor;
-      @include border-radius(100%);
-      &:before{
-        position: absolute;
-        width: $size/4;
-        height: $size/4;
-        right: - $size/2.7;
-        top: 0; //round($size/6);
-        background-color:$basecolor;
-        display: block;
-        @include border-radius($size/8);
-        box-shadow: 0 -$size + $size/4 0 $basecolor;
-      }
-      &:after{
-        position: absolute;
-        width: $size/4;
-        height: $size/4;
-        right: 0;//round($size/6);
-        top: round($size/2.5);
-        background-color:$basecolor;
-        display: block;
-        @include border-radius($size/20);
-        box-shadow: 0 0-$size + $size/4 0 $basecolor;
-      }
-    }
-    .licon-paper{
-      width: ceil($size/1.3);height:$size;border:$size/16 solid $basecolor;@include border-radius($size/8);
-      &:before{
-        width: $size/3;height: $size/16;background-color:$basecolor;@include border-radius($size/8);position: absolute;top:$size/5;left:$size/20;box-shadow:0 $size/4 0 $basecolor, 0 $size/2 0 $basecolor;
-      }
-      &:after{
-        width: $size/2;height: $size/16;background-color:$basecolor;@include border-radius($size/8);position: absolute;top:$size/14;left:$size/20;box-shadow:0 $size/4 0 $basecolor, 0 $size/2 0 $basecolor;
-      }
-    }
-    //@-webkit-keyframes gear-rotate {
-    //  0% { -webkit-transform: rotate(0deg); }
-    //  100% { -webkit-transform: rotate(180deg); }
-    //}
-    //@-moz-keyframes gear-rotate {
-    //  0% { transform: rotate(0deg); }
-    //  100% { transform: rotate(180deg); }
-    //}
-    //@keyframes gear-rotate {
-    //  0% { transform: rotate(0deg); }
-    //  100% { transform: rotate(180deg); }
-    //}
-    //.gear{
-    //  margin: 0 20px;
-    //  width: 20px;
-    //  height: 20px;
-    //  background: #2C2C2C;
-    //  position: relative;
-    //  border-radius: 10px;
-    //  -webkit-animation: 1s gear-rotate steps(10) infinite;
-    //  -moz-animation: 1s gear-rotate steps(10) infinite;
-    //  animation: 1s gear-rotate steps(10) infinite;
-    //
-    //  &:after{
-    //    width: 10px;
-    //    height: 10px;
-    //    background: #EEEEEE;
-    //    position: absolute;
-    //    content: "";
-    //    top: 5px;
-    //    left: 5px;
-    //    border-radius: 5px;
-    //  }
-    //  &:before {
-    //    width: 28px;
-    //    height: 28px;
-    //    background: -webkit-linear-gradient(0deg,transparent 39%,#2C2C2C 39%,#2C2C2C 61%, transparent 61%),-webkit-linear-gradient(60deg,transparent 42%,#2C2C2C 42%,#2C2C2C 58%, transparent 58%),-webkit-linear-gradient(120deg,transparent 42%,#2C2C2C 42%,#2C2C2C 58%, transparent 58%);
-    //    background: -moz-linear-gradient(0deg,transparent 39%,#2C2C2C 39%,#2C2C2C 61%, transparent 61%),-moz-linear-gradient(60deg,transparent 42%,#2C2C2C 42%,#2C2C2C 58%, transparent 58%),-moz-linear-gradient(120deg,transparent 42%,#2C2C2C 42%,#2C2C2C 58%, transparent 58%);
-    //    background: -o-linear-gradient(0deg,transparent 39%,#2C2C2C 39%,#2C2C2C 61%, transparent 61%),-o-linear-gradient(60deg,transparent 42%,#2C2C2C 42%,#2C2C2C 58%, transparent 58%),-o-linear-gradient(120deg,transparent 42%,#2C2C2C 42%,#2C2C2C 58%, transparent 58%);
-    //    background: -ms-linear-gradient(0deg,transparent 39%,#2C2C2C 39%,#2C2C2C 61%, transparent 61%),-ms-linear-gradient(60deg,transparent 42%,#2C2C2C 42%,#2C2C2C 58%, transparent 58%),-ms-linear-gradient(120deg,transparent 42%,#2C2C2C 42%,#2C2C2C 58%, transparent 58%);
-    //    background: linear-gradient(0deg,transparent 39%,#2C2C2C 39%,#2C2C2C 61%, transparent 61%),linear-gradient(60deg,transparent 42%,#2C2C2C 42%,#2C2C2C 58%, transparent 58%),linear-gradient(120deg,transparent 42%,#2C2C2C 42%,#2C2C2C 58%, transparent 58%);
-    //    position: absolute;
-    //    content: "";
-    //    top: -4px;
-    //    left: -4px;
-    //    border-radius: 14px;
-    //  }
-    //}
   }
 }

@@ -33,15 +33,16 @@ html lang='en' ng-app='RedPen'
             a.menu-links href="#" Новости
         div.right-bar
           a.authentication href="#" Мой профиль
-          span.licon-sun
-          span.licon-sun
+          a.links.glyphicon.glyphicon-bell.glyphicon-buzz-out href="#" aria-hidden="true"
+          a.links.glyphicon.glyphicon-cog.glyphicon-icon-spin href="#" aria-hidden="true"
 
     main
       div.max-width-wrap
         ul.graphics.clearfix
 
-          li.graphic-item.bigger
-            div#barCartContainer style="height: 100px; width: 50%;"
+          li class="graphic-item ng-class: graph.minBlockWidth ? 'smaller' : 'bigger'" ng-repeat="graph in barDiagrams"
+            div.graphic-item_wrap ng-click="getBarCharts(graph.id, graph.dataPoints);"
+              div ng-attr-id="{{graph.id}}" style="height: 100px; width: 50%;"
 
           li class="graphic-item ng-class: graph.minBlockWidth ? 'smaller' : 'bigger'" ng-repeat="graph in doughnutDiagrams"
             div.graphic-item_wrap ng-click="getDoughnutCharts(graph.id, graph.dataPoints);"
@@ -67,3 +68,13 @@ html lang='en' ng-app='RedPen'
                   span 1 квартал
                   span 2 квартал
                   span 3 квартал
+
+    footer
+      div.bottom-links
+        div.max-width-wrap
+          a.our-contacts href="#" Контакты
+          a.our-rules href="#" Правила
+          a.our-terms href="#" Пользовательское соглашение
+      div.copyright
+        div.max-width-wrap
+          | © 1995—2016 ОАО СланцНефть. Россия, Москва, 117333, ул. Петрова, д. 19 <br/>Генеральная лицензия на использование недр от 12 августа 2013 года.

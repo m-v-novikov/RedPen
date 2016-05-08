@@ -18,7 +18,7 @@ module.exports = function(grunt){
             }
         },
         watch: {
-            files: ['**/**/*.scss', '**/**/*.slim'],
+            files: ['sass/**/*.scss', '**/**/*.slim'],
             tasks: ['slim', 'sass']
         }
     });

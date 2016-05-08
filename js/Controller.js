@@ -113,10 +113,99 @@ manePageControllers.controller('GreatingCtrl', ['$scope',
                 ]
             }
         };
+        $scope.barDiagrams =
+        {
+            categoryPosition : {
+                title: 'Категория должности',
+                id: 'categoryPosition',
+                minBlockWidth: 0,
+                dataPoints: [
+                    {
+                        type: "stackedBar",
+                        lineThickness: 10,
+                        dataPoints: [
+                            { x: 0, y: 30},
+                            { x: 40, y: 50},
+                            { x: 80, y: 60 },
+                            { x: 120, y: 70},
+                            { x: 160, y: 75}
+                        ]
+                    },
+                    {
+                        type: "stackedBar",
+                        lineThickness: 10,
+                        dataPoints: [
+                            { x: 0, y: 10},
+                            { x: 40, y: 20},
+                            { x: 80, y: 25 },
+                            { x: 120, y: 30},
+                            { x: 160, y: 35}
+                        ]
+                    }
+                ]
+            },
+            distributionStructure : {
+                title: 'Распределение по функциональной структуре',
+                id: 'distributionStructure',
+                minBlockWidth: 0,
+                dataPoints: [
+                    {
+                        type: "stackedBar",
+                        lineThickness: 10,
+                        dataPoints: [
+                            { x: 0, y: 30},
+                            { x: 40, y: 50},
+                            { x: 80, y: 60 },
+                            { x: 120, y: 70},
+                            { x: 160, y: 75}
+                        ]
+                    },
+                    {
+                        type: "stackedBar",
+                        lineThickness: 10,
+                        dataPoints: [
+                            { x: 0, y: 10},
+                            { x: 40, y: 20},
+                            { x: 80, y: 25 },
+                            { x: 120, y: 30},
+                            { x: 160, y: 35}
+                        ]
+                    }
+                ]
+            },
+            topOffices : {
+                title: 'ТОП отделений',
+                id: 'topOffices',
+                minBlockWidth: 0,
+                dataPoints: [
+                    {
+                        type: "stackedBar",
+                        lineThickness: 10,
+                        dataPoints: [
+                            { x: 0, y: 30},
+                            { x: 40, y: 50},
+                            { x: 80, y: 60 },
+                            { x: 120, y: 70},
+                            { x: 160, y: 75}
+                        ]
+                    },
+                    {
+                        type: "stackedBar",
+                        lineThickness: 10,
+                        dataPoints: [
+                            { x: 0, y: 10},
+                            { x: 40, y: 20},
+                            { x: 80, y: 25 },
+                            { x: 120, y: 30},
+                            { x: 160, y: 35}
+                        ]
+                    }
+                ]
+            }
+        };
 
         CanvasJS.addColorSet("barChartColors",
             [//colorSet Array
-
                 "#1a991a",
                 "#ff8e0c"
             ]);
@@ -128,12 +217,11 @@ manePageControllers.controller('GreatingCtrl', ['$scope',
                 "#bed44e",
                 "#a053a3",
                 "#facb37",
-                "#00b393",
+                "#00b393"
 
             ]);
         CanvasJS.addColorSet("lineChartColor",
             [//colorSet Array
-
                 "#1b8b14",
                 "#ff8e0c"
             ]);
@@ -212,67 +300,39 @@ manePageControllers.controller('GreatingCtrl', ['$scope',
             doughnutChart.render();
         };
 
-        $scope.barChart = new CanvasJS.Chart("barCartContainer", {
-            colorSet: "barChartColors",
-            animationEnabled: true,
-            animationDuration: 1000,
-            dataPointWidth: 5,
-            axisX:{
-                gridThickness: 0,
-                lineThickness: 0,
-                maximum: 180,
-                tickThickness: 0,
-                labelFormatter: function ( e ) {
-                    return '';
-                }
-            },
-            axisY:{
-                gridThickness: 0,
-                lineThickness: 0,
-                maximum: 130,
-                tickThickness: 0,
-                labelFormatter: function ( e ) {
-                    return '';
-                }
-            },
-            toolTip:{
-                enabled: false
-            },
-
-            data: [
-
-                {
-                    type: "stackedBar",
-                    lineThickness: 10,
-                    dataPoints: [
-                        { x: 0, y: 30},
-                        { x: 40, y: 50},
-                        { x: 80, y: 60 },
-                        { x: 120, y: 70},
-                        { x: 160, y: 75}
-                    ]
+        $scope.getBarCharts =function(id, dataPoints){
+            var barChart = new CanvasJS.Chart(id, {
+                colorSet: "barChartColors",
+                animationEnabled: true,
+                animationDuration: 1000,
+                dataPointWidth: 5,
+                axisX:{
+                    gridThickness: 0,
+                    lineThickness: 0,
+                    maximum: 180,
+                    tickThickness: 0,
+                    labelFormatter: function ( e ) {
+                        return '';
+                    }
                 },
-                {
-                    type: "stackedBar",
-                    lineThickness: 10,
-                    dataPoints: [
-                        { x: 0, y: 10},
-                        { x: 20, y: 0},
-                        { x: 40, y: 20},
-                        { x: 60, y: 0},
-                        { x: 80, y: 25 },
-                        { x: 100, y: 0 },
-                        { x: 120, y: 30},
-                        { x: 140, y: 0},
-                        { x: 160, y: 35}
-                    ]
-                }
-            ]
-        });
+                axisY:{
+                    gridThickness: 0,
+                    lineThickness: 0,
+                    maximum: 130,
+                    tickThickness: 0,
+                    labelFormatter: function ( e ) {
+                        return '';
+                    }
+                },
+                toolTip:{
+                    enabled: false
+                },
 
-        $scope.barChart.render();
+                data: dataPoints
+            });
+            barChart.render();
 
-
+        };
 
         //$scope.clickOnUpload = function ($event) {
         //    $event.stopPropagation();
@@ -281,11 +341,6 @@ manePageControllers.controller('GreatingCtrl', ['$scope',
         //        angular.element('.graphic-item_wrap').triggerHandler('click');
         //    }, 100);
         //};
-
-
-
-
-
     }]);
 
 

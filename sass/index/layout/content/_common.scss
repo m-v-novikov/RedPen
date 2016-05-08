@@ -1,11 +1,14 @@
 .graphics{
   padding: 40px 0;
+  margin-left: -3%;
+  margin-right: -3%;
   .graphic-item{
     background: #ffffff;
     padding: 20px 0;
     text-align: center;
     float: left;
     margin: 20px 2%;
+    @include box-shadow(0, 1px, 4px, rgba(0, 0, 0, 0.4));
     &.smaller{
       width: 21%;
     }
