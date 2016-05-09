@@ -42,13 +42,15 @@ html lang='en' ng-app='RedPen'
 
           li class="graphic-item ng-class: graph.minBlockWidth ? 'smaller' : 'bigger'" ng-repeat="graph in barDiagrams"
             div.graphic-item_wrap ng-click="getBarCharts(graph.id, graph.dataPoints);"
-              div ng-attr-id="{{graph.id}}" style="height: 100px; width: 50%;"
-
-          li class="graphic-item ng-class: graph.minBlockWidth ? 'smaller' : 'bigger'" ng-repeat="graph in doughnutDiagrams"
-            div.graphic-item_wrap ng-click="getDoughnutCharts(graph.id, graph.dataPoints);"
               div.graphic-item_title
                 | {{graph.title}}
-              div ng-attr-id="{{graph.id}}" style="height: 120px; width: 50%;"
+              div.graphic-item_bar-chart ng-attr-id="{{graph.id}}" style="height: {{graph.height}}"
+
+          li class="graphic-item ng-class: graph.minBlockWidth ? 'smaller' : 'bigger'" ng-repeat="graph in doughnutDiagrams"
+            div.graphic-item_wrap ng-click="getDoughnutCharts(graph.id, graph.dataPoints, graph.hAlign, graph.vAlign);"
+              div.graphic-item_title
+                | {{graph.title}}
+              div.graphic-item_doughnut-chart ng-attr-id="{{graph.id}}" style="width: {{graph.width || '60%'}}; height: {{graph.height || '120px'}}"
 
           li class="graphic-item ng-class: graph.minBlockWidth ? 'smaller' : 'bigger'" ng-repeat="graph in lineDiagrams"
             div.graphic-item_wrap ng-click="getLineCharts(graph.id, graph.dataPoints);"
@@ -58,7 +60,7 @@ html lang='en' ng-app='RedPen'
                 |{{graph.commonQuantity}}
                 p
                   |{{graph.measure}} за все время
-              div ng-attr-id="{{graph.id}}" style="height: 120px; width: 100%;"
+              div.graphic-item_chart ng-attr-id="{{graph.id}}"
               div.graphic-item_description
                 p.graphic-item_item_description.top
                   span +3000

@@ -84,19 +84,23 @@ manePageControllers.controller('GreatingCtrl', ['$scope',
             proportionProjectsObjectives : {
                 title: 'Доля проектов в стратегических задачах',
                 id: 'proportionProjectsObjectives',
+                hAlign: 'right',
+                height: '180px',
+                width: '90%',
                 minBlockWidth: 0,
                 dataPoints: [
-                    {y: 345, name: 345 + '% ' + "mar"},
-                    {y: 367, name: "apr"},
-                    {y: 453, name: "may"},
-                    {y: 256, name: "jun"},
-                    {y: 234, name: "sep"},
-                    {y: 456, name: "oct"}
+                    {y: 100, name: 10 + '% Клиентоориентированность'},
+                    {y: 250, name: 25 + '% Гидроразрывы'},
+                    {y: 70, name: 7 + '% Надежность'},
+                    {y: 30, name: 3 + '% Снижение затрат и рост продаж'},
+                    {y: 300, name: 30 + '% Рост нефтедобычы'},
+                    {y: 210, name: 21 + '% Производительность и эффективность'}
                 ]
             },
             sexParties : {
                 title: 'Пол участников',
                 id: 'sexParties',
+                vAlign: 'bottom',
                 minBlockWidth: 1,
                 dataPoints: [
                     {y: 850, name: 85 + '% ' + "мужчин"},
@@ -106,6 +110,7 @@ manePageControllers.controller('GreatingCtrl', ['$scope',
             ageParties : {
                 title: 'Возраст участников',
                 id: 'ageParties',
+                hAlign: 'right',
                 minBlockWidth: 0,
                 dataPoints: [
                     {y: 550, name: 55 + '% ' + "до 40 лет"},
@@ -118,28 +123,29 @@ manePageControllers.controller('GreatingCtrl', ['$scope',
             categoryPosition : {
                 title: 'Категория должности',
                 id: 'categoryPosition',
+                height: '130px',
                 minBlockWidth: 0,
                 dataPoints: [
                     {
                         type: "stackedBar",
                         lineThickness: 10,
                         dataPoints: [
-                            { x: 0, y: 30},
-                            { x: 40, y: 50},
-                            { x: 80, y: 60 },
-                            { x: 120, y: 70},
-                            { x: 160, y: 75}
+                            { y: 30, label: "Геофизик-интерпретатор"},
+                            { y: 50, label: "Дефектоскопист по контролю"},
+                            { y: 60, label: "Супервайзер по бурению" },
+                            { y: 70, label: "Менеджер технологических насосов"},
+                            { y: 75, label: "Лаборант химического анализа"}
                         ]
                     },
                     {
                         type: "stackedBar",
                         lineThickness: 10,
                         dataPoints: [
-                            { x: 0, y: 10},
-                            { x: 40, y: 20},
-                            { x: 80, y: 25 },
-                            { x: 120, y: 30},
-                            { x: 160, y: 35}
+                            { y: 10, label: "Геофизик-интерпретатор"},
+                            { y: 20, label: "Дефектоскопист по контролю"},
+                            { y: 25, label: "Супервайзер по бурению" },
+                            { y: 30, label: "Менеджер технологических насосов"},
+                            { y: 35, label: "Лаборант химического анализа"}
                         ]
                     }
                 ]
@@ -147,28 +153,57 @@ manePageControllers.controller('GreatingCtrl', ['$scope',
             distributionStructure : {
                 title: 'Распределение по функциональной структуре',
                 id: 'distributionStructure',
+                height: '500px',
                 minBlockWidth: 0,
                 dataPoints: [
                     {
                         type: "stackedBar",
                         lineThickness: 10,
                         dataPoints: [
-                            { x: 0, y: 30},
-                            { x: 40, y: 50},
-                            { x: 80, y: 60 },
-                            { x: 120, y: 70},
-                            { x: 160, y: 75}
+                            { y: 30, label: "Балтийский НПЗ"},
+                            { y: 50, label: "Байкальский НПЗ"},
+                            { y: 60, label: "Волго-Вятский НПЗ" },
+                            { y: 70, label: "Дальневосточный НПЗ"},
+                            { y: 75, label: "Западно-Сибирский НПЗ"},
+                            { y: 30, label: "Западно-Уральский НПЗ"},
+                            { y: 50, label: "Московский НПЗ"},
+                            { y: 60, label: "Поволжский НПЗ" },
+                            { y: 70, label: "Северный НПЗ"},
+                            { y: 75, label: "Северо-Западный НПЗ"},
+                            { y: 50, label: "Сибирский НПЗ"},
+                            { y: 60, label: "Среднерусский НПЗ" },
+                            { y: 70, label: "Уральский НПЗ"},
+                            { y: 75, label: "Центрально-Черноземный НПЗ"},
+                            { y: 50, label: "Юго-Западный НПЗ"},
+                            { y: 60, label: "ДБО НПЗ" },
+                            { y: 70, label: "ДМО НПЗ"},
+                            { y: 75, label: "ППЗ НПЗ"}
                         ]
                     },
                     {
                         type: "stackedBar",
                         lineThickness: 10,
+                        showInLegend: true,
+                        legendText: "Прирост за 3 месяца",
                         dataPoints: [
-                            { x: 0, y: 10},
-                            { x: 40, y: 20},
-                            { x: 80, y: 25 },
-                            { x: 120, y: 30},
-                            { x: 160, y: 35}
+                            { y: 10, label: "Балтийский НПЗ"},
+                            { y: 20, label: "Байкальский НПЗ"},
+                            { y: 25, label: "Волго-Вятский НПЗ" },
+                            { y: 30, label: "Дальневосточный НПЗ"},
+                            { y: 35, label: "Западно-Сибирский НПЗ"},
+                            { y: 25, label: "Западно-Уральский НПЗ"},
+                            { y: 20, label: "Московский НПЗ"},
+                            { y: 30, label: "Поволжский НПЗ" },
+                            { y: 20, label: "Северный НПЗ"},
+                            { y: 10, label: "Северо-Западный НПЗ"},
+                            { y: 20, label: "Сибирский НПЗ"},
+                            { y: 20, label: "Среднерусский НПЗ" },
+                            { y: 20, label: "Уральский НПЗ"},
+                            { y: 30, label: "Центрально-Черноземный НПЗ"},
+                            { y: 15, label: "Юго-Западный НПЗ"},
+                            { y: 20, label: "ДБО НПЗ" },
+                            { y: 25, label: "ДМО НПЗ"},
+                            { y: 15, label: "ППЗ НПЗ"}
                         ]
                     }
                 ]
@@ -176,28 +211,42 @@ manePageControllers.controller('GreatingCtrl', ['$scope',
             topOffices : {
                 title: 'ТОП отделений',
                 id: 'topOffices',
+                height: '250px',
                 minBlockWidth: 0,
                 dataPoints: [
                     {
                         type: "stackedBar",
                         lineThickness: 10,
                         dataPoints: [
-                            { x: 0, y: 30},
-                            { x: 40, y: 50},
-                            { x: 80, y: 60 },
-                            { x: 120, y: 70},
-                            { x: 160, y: 75}
+                            { y: 30, label: "Республика Татарстан"},
+                            { y: 50, label: "Республика Карелия"},
+                            { y: 60, label: "Республика Карачаево-Черкесия" },
+                            { y: 70, label: "Республика Дагестан"},
+                            { y: 75, label: "Ханты-Мансийский автономный округ"},
+                            { y: 30, label: "Чукотский автономный округ"},
+                            { y: 50, label: "Тверская область"},
+                            { y: 60, label: "Томская область" },
+                            { y: 70, label: "Тульская область"},
+                            { y: 75, label: "Тюменская область"}
                         ]
                     },
                     {
                         type: "stackedBar",
                         lineThickness: 10,
+                        showInLegend: true,
+                        legendText: "Прирост за 3 месяца",
+                        markerMargin: 10,
                         dataPoints: [
-                            { x: 0, y: 10},
-                            { x: 40, y: 20},
-                            { x: 80, y: 25 },
-                            { x: 120, y: 30},
-                            { x: 160, y: 35}
+                            { y: 10, label: "Республика Татарстан"},
+                            { y: 20, label: "Республика Карелия"},
+                            { y: 25, label: "Республика Карачаево-Черкесия" },
+                            { y: 30, label: "Республика Дагестан"},
+                            { y: 35, label: "Ханты-Мансийский автономный округ"},
+                            { y: 10, label: "Чукотский автономный округ"},
+                            { y: 20, label: "Тверская область"},
+                            { y: 25, label: "Томская область" },
+                            { y: 30, label: "Тульская область"},
+                            { y: 35, label: "Тюменская область"}
                         ]
                     }
                 ]
@@ -243,6 +292,7 @@ manePageControllers.controller('GreatingCtrl', ['$scope',
                         }
                     },
                     axisY:{
+                        margin: 0,
                         gridThickness: 0,
                         lineThickness: 0,
                         tickThickness: 0,
@@ -270,7 +320,7 @@ manePageControllers.controller('GreatingCtrl', ['$scope',
         };
 
 
-        $scope.getDoughnutCharts =function(id, dataPoints) {
+        $scope.getDoughnutCharts =function(id, dataPoints, hAlign, vAlign ) {
 
             var doughnutChart = new CanvasJS.Chart(id,
                 {
@@ -278,14 +328,13 @@ manePageControllers.controller('GreatingCtrl', ['$scope',
                     animationEnabled: true,
                     animationDuration: 1000,
                     interactivityEnabled: false,
-
                     toolTip: {
                         enabled: false
                     },
                     legend: {
                         fontSize: 12,
-                        horizontalAlign: "right", // left, center ,right
-                        verticalAlign: "center"  // top, center, bottom
+                        horizontalAlign: hAlign || 'center', // left, center ,right
+                        verticalAlign: vAlign  || 'center'// top, center, bottom
                     },
 
                     data: [
@@ -303,22 +352,22 @@ manePageControllers.controller('GreatingCtrl', ['$scope',
         $scope.getBarCharts =function(id, dataPoints){
             var barChart = new CanvasJS.Chart(id, {
                 colorSet: "barChartColors",
+                interactivityEnabled: false,
                 animationEnabled: true,
                 animationDuration: 1000,
                 dataPointWidth: 5,
                 axisX:{
+                    labelFontSize: 13,
+                    labelFontColor: "#5c5c5c",
                     gridThickness: 0,
                     lineThickness: 0,
-                    maximum: 180,
                     tickThickness: 0,
-                    labelFormatter: function ( e ) {
-                        return '';
-                    }
+                    interval: 1,
+
                 },
                 axisY:{
                     gridThickness: 0,
                     lineThickness: 0,
-                    maximum: 130,
                     tickThickness: 0,
                     labelFormatter: function ( e ) {
                         return '';
@@ -326,6 +375,12 @@ manePageControllers.controller('GreatingCtrl', ['$scope',
                 },
                 toolTip:{
                     enabled: false
+                },
+                legend: {
+                    fontSize: 12,
+                    fontFamily: "robotoregular",
+                    markerMargin: 10, //not work needed fix it in canvas.js
+                    fontColor: "#5c5c5c"
                 },
 
                 data: dataPoints

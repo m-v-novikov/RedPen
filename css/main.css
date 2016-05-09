@@ -7597,6 +7597,7 @@ header .right-bar .links.glyphicon-cog {
   text-align: center;
   float: left;
   margin: 20px 2%;
+  position: relative;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
@@ -7604,18 +7605,34 @@ header .right-bar .links.glyphicon-cog {
 .graphics .graphic-item.smaller {
   width: 21%;
 }
+.graphics .graphic-item.smaller .graphic-item_chart {
+  height: 120px;
+  width: 100%;
+}
 .graphics .graphic-item.bigger {
   width: 46%;
 }
 .graphics .graphic-item_title {
   font-size: 16px;
   height: 50px;
+  max-width: 80%;
+  margin: 0 auto;
 }
 .graphics .graphic-item_quantity {
   font-size: 24px;
 }
 .graphics .graphic-item_quantity p {
   font-size: 12px;
+}
+.graphics .graphic-item_bar-chart {
+  height: auto;
+  width: 80%;
+  display: inline-block;
+  margin: 0 auto;
+}
+.graphics .graphic-item_doughnut-chart {
+  width: 80%;
+  margin: 0 auto;
 }
 .graphics .graphic-item_description {
   font-size: 12px;
