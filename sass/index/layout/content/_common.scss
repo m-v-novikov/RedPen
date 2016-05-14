@@ -69,4 +69,48 @@
     }
 
   }
+  #rusMap{
+    height: 100%;
+    .land{
+      @include scale(0.32);
+
+      &.units22500{
+        fill: #1b8b14;
+      }
+      &.units20000{
+        fill: #1b8b14;
+      }
+      &.units18000{
+        fill: #5da118;
+      }
+      &.units15000{
+        fill: #5da118;
+      }
+      &.units12000{
+        fill: #8acb3d;
+      }
+      &.units11000{
+        fill: #9fda67;
+      }
+      &.units10000{
+        fill: #cbf4a1;
+      }
+      &.units90000{
+        fill: #cbf4a1;
+      }
+      &.units80000{
+        fill: #d9f4bc;
+      }
+      &.units70000{
+        fill: #ddf0ca;
+      }
+      &.units100{
+        fill: #bababa;
+      }
+    }
+    svg{
+      width: 80%;
+      height: 100%;
+    }
+  }
 }

@@ -7651,6 +7651,53 @@ header .right-bar .links.glyphicon-cog {
   width: 33%;
   text-align: center;
 }
+.graphics #rusMap {
+  height: 100%;
+}
+.graphics #rusMap .land {
+  -webkit-transform: scale(0.32);
+  -moz-transform: scale(0.32);
+  -ms-transform: scale(0.32);
+  -o-transform: scale(0.32);
+  transform: scale(0.32);
+}
+.graphics #rusMap .land.units22500 {
+  fill: #1b8b14;
+}
+.graphics #rusMap .land.units20000 {
+  fill: #1b8b14;
+}
+.graphics #rusMap .land.units18000 {
+  fill: #5da118;
+}
+.graphics #rusMap .land.units15000 {
+  fill: #5da118;
+}
+.graphics #rusMap .land.units12000 {
+  fill: #8acb3d;
+}
+.graphics #rusMap .land.units11000 {
+  fill: #9fda67;
+}
+.graphics #rusMap .land.units10000 {
+  fill: #cbf4a1;
+}
+.graphics #rusMap .land.units90000 {
+  fill: #cbf4a1;
+}
+.graphics #rusMap .land.units80000 {
+  fill: #d9f4bc;
+}
+.graphics #rusMap .land.units70000 {
+  fill: #ddf0ca;
+}
+.graphics #rusMap .land.units100 {
+  fill: #bababa;
+}
+.graphics #rusMap svg {
+  width: 80%;
+  height: 100%;
+}
 
 footer {
   background: #ffffff;
