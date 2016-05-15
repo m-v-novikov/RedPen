@@ -7517,6 +7517,13 @@ button.close {
   font-style: normal;
 }
 @font-face {
+  font-family: 'robotomedium';
+  src: url("./../files/fonts/RobotoMedium/roboto-medium-webfont.eot");
+  src: url("./../files/fonts/RobotoMedium/roboto-medium-webfont.eot?#iefix") format("embedded-opentype"), url("./../files/fonts/RobotoMedium/roboto-medium-webfont.woff2") format("woff2"), url("./../files/fonts/RobotoMedium/roboto-medium-webfont.woff") format("woff"), url("./../files/fonts/RobotoMedium/roboto-medium-webfont.ttf") format("truetype"), url("./../files/fonts/RobotoMedium/roboto-medium-webfont.svg#robotomedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Glyphicons Halflings';
   src: url("./../files/fonts/bootstrap/glyphicons-halflings-regular.eot");
   src: url("./../files/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("./../files/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("./../files/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("./../files/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("./../files/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons") format("svg");
@@ -7617,6 +7624,7 @@ header .right-bar .links.glyphicon-cog {
   height: 50px;
   max-width: 80%;
   margin: 0 auto;
+  font-family: 'robotomedium';
 }
 .graphics .graphic-item_quantity {
   font-size: 24px;
@@ -7651,15 +7659,69 @@ header .right-bar .links.glyphicon-cog {
   width: 33%;
   text-align: center;
 }
+.graphics .graphic-item.map-region-activity .graphic-item_legend {
+  float: left;
+  width: 20%;
+  text-align: right;
+  margin-top: 5%;
+}
+.graphics .graphic-item.map-region-activity .graphic-item_legend .legend-square {
+  font-size: 12px;
+}
+.graphics .graphic-item.map-region-activity .graphic-item_legend .legend-square:after {
+  content: '';
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-left: 10px;
+  background: #bababa;
+}
+.graphics .graphic-item.map-region-activity .graphic-item_legend .legend-square.units-100:before {
+  content: '<';
+  display: inline;
+}
+.graphics .graphic-item.map-region-activity .graphic-item_legend .legend-square.units-22500:after {
+  background: #1b8b14;
+}
+.graphics .graphic-item.map-region-activity .graphic-item_legend .legend-square.units-20000:after {
+  background: #1b8b14;
+}
+.graphics .graphic-item.map-region-activity .graphic-item_legend .legend-square.units-18000:after {
+  background: #5da118;
+}
+.graphics .graphic-item.map-region-activity .graphic-item_legend .legend-square.units-15000:after {
+  background: #5da118;
+}
+.graphics .graphic-item.map-region-activity .graphic-item_legend .legend-square.units-12000:after {
+  background: #8acb3d;
+}
+.graphics .graphic-item.map-region-activity .graphic-item_legend .legend-square.units-11000:after {
+  background: #9fda67;
+}
+.graphics .graphic-item.map-region-activity .graphic-item_legend .legend-square.units-10000:after {
+  background: #cbf4a1;
+}
+.graphics .graphic-item.map-region-activity .graphic-item_legend .legend-square.units-9000:after {
+  background: #cbf4a1;
+}
+.graphics .graphic-item.map-region-activity .graphic-item_legend .legend-square.units-8000:after {
+  background: #d9f4bc;
+}
+.graphics .graphic-item.map-region-activity .graphic-item_legend .legend-square.units-7000:after {
+  background: #ddf0ca;
+}
 .graphics #rusMap {
-  height: 100%;
+  height: 250px;
+  width: 70%;
+  float: right;
+  margin-right: 10px;
 }
 .graphics #rusMap .land {
-  -webkit-transform: scale(0.32);
-  -moz-transform: scale(0.32);
-  -ms-transform: scale(0.32);
-  -o-transform: scale(0.32);
-  transform: scale(0.32);
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  -o-transform: scale(0.3);
+  transform: scale(0.3);
 }
 .graphics #rusMap .land.units22500 {
   fill: #1b8b14;
@@ -7682,20 +7744,20 @@ header .right-bar .links.glyphicon-cog {
 .graphics #rusMap .land.units10000 {
   fill: #cbf4a1;
 }
-.graphics #rusMap .land.units90000 {
+.graphics #rusMap .land.units9000 {
   fill: #cbf4a1;
 }
-.graphics #rusMap .land.units80000 {
+.graphics #rusMap .land.units8000 {
   fill: #d9f4bc;
 }
-.graphics #rusMap .land.units70000 {
+.graphics #rusMap .land.units7000 {
   fill: #ddf0ca;
 }
 .graphics #rusMap .land.units100 {
   fill: #bababa;
 }
 .graphics #rusMap svg {
-  width: 80%;
+  width: 100%;
   height: 100%;
 }
 

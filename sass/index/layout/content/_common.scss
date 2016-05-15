@@ -25,6 +25,7 @@
       height: 50px;
       max-width: 80%;
       margin: 0 auto;
+      font-family: 'robotomedium';
     }
     &_quantity{
       font-size: 24px;
@@ -68,12 +69,75 @@
       }
     }
 
-  }
-  #rusMap{
-    height: 100%;
-    .land{
-      @include scale(0.32);
 
+
+    &.map-region-activity{
+      .graphic-item_title{
+
+      }
+      .graphic-item_legend{
+          float: left;
+          width: 20%;
+          text-align: right;
+          margin-top: 5%;
+          .legend-square{
+            font-size: 12px;
+            &:after{
+              content: '';
+              display: inline-block;
+              width: 11px;
+              height: 11px;
+              margin-left: 10px;
+              background: #bababa;
+            }
+            &.units-100{
+              &:before{
+                content: '<';
+                display: inline;
+              }
+            }
+            &.units-22500:after{
+              background: #1b8b14;
+            }
+            &.units-20000:after{
+              background: #1b8b14;
+            }
+            &.units-18000:after{
+              background: #5da118;
+            }
+            &.units-15000:after{
+              background: #5da118;
+            }
+            &.units-12000:after{
+              background: #8acb3d;
+            }
+            &.units-11000:after{
+              background: #9fda67;
+            }
+            &.units-10000:after{
+              background: #cbf4a1;
+            }
+            &.units-9000:after{
+              background: #cbf4a1;
+            }
+            &.units-8000:after{
+              background: #d9f4bc;
+            }
+            &.units-7000:after{
+              background: #ddf0ca;
+            }
+          }
+      }
+    }
+  }
+
+  #rusMap{
+    height: 250px;
+    width: 70%;
+    float: right;
+    margin-right: 10px;
+    .land{
+      @include scale(0.30);
       &.units22500{
         fill: #1b8b14;
       }
@@ -95,13 +159,13 @@
       &.units10000{
         fill: #cbf4a1;
       }
-      &.units90000{
+      &.units9000{
         fill: #cbf4a1;
       }
-      &.units80000{
+      &.units8000{
         fill: #d9f4bc;
       }
-      &.units70000{
+      &.units7000{
         fill: #ddf0ca;
       }
       &.units100{
@@ -109,7 +173,7 @@
       }
     }
     svg{
-      width: 80%;
+      width: 100%;
       height: 100%;
     }
   }

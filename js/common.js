@@ -16,6 +16,8 @@ $(document).ready(function(){
         "RU-ULY"  : "15000",
         "RU-YAR" : "8000",
         "RU-SPE"  : "9000",
+        "RU-KO"  : "12000",
+        "RU-KR"  : "14000",
         "RU-KYA"  : "18000",
         "RU-SA"  : "10000",
         "RU-TOM" : "22000",
