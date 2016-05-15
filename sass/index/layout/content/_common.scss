@@ -12,9 +12,12 @@
     @include box-shadow(0, 1px, 4px, rgba(0, 0, 0, 0.4));
     &.smaller{
       width: 21%;
-      .graphic-item_chart{
+      .graphic-item_line-chart{
         height: 120px;
-        width: 100%;
+        width: 130%;
+        margin-left:-15%;
+        margin-right:-15%;
+        background: transparent;
       }
     }
     &.bigger{

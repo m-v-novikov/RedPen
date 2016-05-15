@@ -283,6 +283,7 @@ manePageControllers.controller('GreatingCtrl', ['$scope',
                     animationEnabled: true,
                     animationDuration: 1000,
                     interactivityEnabled: false,
+                    backgroundColor: 'transparent',
                     axisX:{
                         gridThickness: 0,
                         lineThickness: 0,
