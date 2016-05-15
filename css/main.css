@@ -7611,12 +7611,13 @@ header .right-bar .links.glyphicon-cog {
 }
 .graphics .graphic-item.smaller {
   width: 21%;
+  overflow: hidden;
 }
 .graphics .graphic-item.smaller .graphic-item_line-chart {
   height: 120px;
-  width: 130%;
-  margin-left: -15%;
-  margin-right: -15%;
+  width: 140%;
+  margin-left: -20%;
+  margin-right: -20%;
   background: transparent;
 }
 .graphics .graphic-item.bigger {
